@@ -12,8 +12,8 @@
 					<p>{{item.lieu.adresse}}</p>
 					<p>{{item.prix | showPrix}}</p>
           <p>{{item.date}}</p>
-					<p v-if="description === false">{{item.description | longElt}} <span class="btn btn-primary btn-xs" @click="description = true">Read More</span></p>
-						<p v-if="description === true">{{item.description}} <span class="btn btn-primary btn-xs" @click="description = false">Hide</span></p>
+					<p v-if="item.voirPlus === false">{{item.description | longElt}} <span class="btn btn-primary btn-xs" @click="item.voirPlus = true">Read More</span></p>
+					<p v-if="item.voirPlus === true">{{item.description}} <span class="btn btn-primary btn-xs" @click="item.voirPlus = false">Hide</span></p>
 					<button type="button" class="btn btn-success" @click="deleteShow(item)">Delete</button>
 				</div>
 			</div>
